@@ -1,0 +1,32 @@
+Folder PATH listing
+Volume serial number is 7CBA-6544
+C:.
+|   app.py
+|   config.py
+|   structure.txt
+|   
++---backend
+|       data_handler.py
+|       pnl_calculator.py
+|       screener.py
+|       trade_editor.py
+|       watchlist_handler.py
+|       __init__.py
+|       
++---data
+|       trades.csv
+|       
++---services
+|       alert_engine.py
+|       price_fetcher.py
+|       __init__.py
+|       
++---utils
+|       general_utils.py
+|       trade_filters.py
+|       __init__.py
+|       
+\---__pycache__
+        config.cpython-313.pyc
+        data_handler.cpython-313.pyc
+        

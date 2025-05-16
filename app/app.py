@@ -1,13 +1,21 @@
+import sys
+import os
+
+# Add current app folder to sys.path for internal imports
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+
 import streamlit as st
 from datetime import datetime
 import pandas as pd
 
 from config import DATA_PATH, REFRESH_INTERVAL
-from data_handler import load_data
-from price_fetcher import update_current_prices
-from pnl_calculator import compute_pnl_summary
-from trade_filters import apply_filters
-from trade_editor import display_trades_section, new_trade_form
+from backend.data_handler import load_trades
+from services.price_fetcher import get_current_price
+from backend.pnl_calculator import compute_pnl_summary
+from utils.trade_filters import apply_filters
+from backend.trade_editor import display_trades_section, new_trade_form
+
+
 
 # --- Load Data ---
 df = load_data(DATA_PATH)

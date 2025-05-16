@@ -1,4 +1,4 @@
-from price_fetcher import get_current_price
+from app.services.price_fetcher import get_current_price
 
 def compute_pnl_summary(df):
     open_pnl = 0
